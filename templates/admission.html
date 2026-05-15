@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Admission - ST MARY'S SCHOOL{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Admission Form</h1>
+        <p class="hero-subtitle">Take the First Step Towards Excellence</p>
+    </div>
+</section>
+
+<!-- Information Section -->
+<section class="container">
+    <div class="cards-grid">
+        <div class="card">
+            <h3>📋 Admission Criteria</h3>
+            <p>We welcome applications from students of all abilities and backgrounds. Selection is based on academic potential, aptitude, and fit with our school's values.</p>
+        </div>
+
+        <div class="card">
+            <h3>📅 Important Dates</h3>
+            <p><strong>Application Deadline:</strong> June 30, 2024<br>
+            <strong>Entrance Exam:</strong> July 15, 2024<br>
+            <strong>Results:</strong> July 30, 2024<br>
+            <strong>Classes Begin:</strong> August 1, 2024</p>
+        </div>
+
+        <div class="card">
+            <h3>📄 Required Documents</h3>
+            <p>• Birth Certificate<br>
+            • Previous School Report Card<br>
+            • Medical Certificate<br>
+            • Passport Size Photographs<br>
+            • Proof of Address</p>
+        </div>
+    </div>
+</section>
+
+<!-- Admission Form -->
+<section class="container">
+    <h2 style="text-align: center; margin: 2rem 0;">Student & Parent Information</h2>
+    
+    <div style="max-width: 800px; margin: 0 auto; background-color: #f5f5f5; padding: 2rem; border-radius: 8px;">
+        <form id="admission-form" method="POST" action="{{ url_for('admission') }}" onsubmit="return validateAdmissionForm()">
+            <!-- Student Information -->
+            <h3 style="color: #1b5e20; margin: 1.5rem 0 1rem 0;">Student Information</h3>
+            
+            <div class="form-group">
+                <label for="student_name">Student Full Name *</label>
+                <input type="text" id="student_name" name="student_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth *</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="current_class">Current Class *</label>
+                <select id="current_class" name="current_class" required>
+                    <option value="">-- Select Class --</option>
+                    <option value="I">Class I</option>
+                    <option value="II">Class II</option>
+                    <option value="III">Class III</option>
+                    <option value="IV">Class IV</option>
+                    <option value="V">Class V</option>
+                    <option value="VI">Class VI</option>
+                    <option value="VII">Class VII</option>
+                    <option value="VIII">Class VIII</option>
+                    <option value="IX">Class IX</option>
+                    <option value="X">Class X</option>
+                    <option value="XI">Class XI</option>
+                    <option value="XII">Class XII</option>
+                </select>
+            </div>
+
+            <!-- Parent/Guardian Information -->
+            <h3 style="color: #1b5e20; margin: 1.5rem 0 1rem 0;">Parent/Guardian Information</h3>
+            
+            <div class="form-group">
+                <label for="parent_name">Parent/Guardian Full Name *</label>
+                <input type="text" id="parent_name" name="parent_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="parent_contact">Parent Contact Number *</label>
+                <input type="tel" id="parent_contact" name="parent_contact" placeholder="Format: +1 (234) 567-8900" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Residential Address *</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+
+            <!-- Additional Information -->
+            <h3 style="color: #1b5e20; margin: 1.5rem 0 1rem 0;">Additional Information</h3>
+            
+            <div class="form-group">
+                <label for="message">Message or Questions (Optional)</label>
+                <textarea id="message" name="message" placeholder="Tell us anything else you'd like us to know..."></textarea>
+            </div>
+
+            <!-- Submission -->
+            <div class="form-group" style="margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Submit Application</button>
+            </div>
+
+            <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                * All fields marked with asterisk are required
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section style="background-color: #f5f5f5; padding: 3rem 0; margin-top: 3rem;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>What is the eligibility criteria?</h3>
+                <p>We accept applications from students across all academic levels (Class I to XII). There is no age bar, and applications from all religions, castes, and backgrounds are encouraged.</p>
+            </div>
+
+            <div class="card">
+                <h3>When can I submit my application?</h3>
+                <p>Applications are open year-round. However, for the academic year 2024-25, the last date for submission is June 30, 2024. Early submission is recommended.</p>
+            </div>
+
+            <div class="card">
+                <h3>Is there an entrance exam?</h3>
+                <p>Yes, candidates are required to appear for an entrance assessment which evaluates academic knowledge and aptitude. This helps us place students in appropriate academic levels.</p>
+            </div>
+
+            <div class="card">
+                <h3>What are the admission fees?</h3>
+                <p>Admission fees vary by class level. Please refer to our Fee Structure page or contact the admissions office for detailed information about fees for your chosen class.</p>
+            </div>
+
+            <div class="card">
+                <h3>When will I receive the admission result?</h3>
+                <p>Results are typically announced within 2-3 weeks of the entrance exam. Parents will be notified via email and phone. Results are also displayed on our notice board.</p>
+            </div>
+
+            <div class="card">
+                <h3>Is there any scholarship available?</h3>
+                <p>Yes, we offer merit-based scholarships for deserving students. Scholarships are awarded based on entrance exam performance and family income. Contact us for details.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="container" style="text-align: center; padding: 3rem 1rem;">
+    <h2>Need More Information?</h2>
+    <p style="font-size: 1.1rem; margin: 1.5rem 0;">Our admissions team is here to help answer all your questions</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact Us</a>
+</section>
+{% endblock %}

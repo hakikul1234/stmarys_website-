@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - ST MARY'S SCHOOL{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="hero-subtitle">We're Here to Help</p>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="container">
+    <h2 style="text-align: center; margin: 2rem 0;">Get in Touch With Us</h2>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <h3>📍 Address</h3>
+            <p><strong>ST MARY'S SCHOOL</strong><br>
+            123 Education Street<br>
+            School City, SC 12345<br>
+            Country</p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Phone</h3>
+            <p><strong>Main Office:</strong><br>
+            <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><strong>Admissions:</strong><br>
+            <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+            <p><strong>Principal's Office:</strong><br>
+            <a href="tel:+1234567892">+1 (234) 567-892</a></p>
+        </div>
+
+        <div class="card">
+            <h3>✉️ Email</h3>
+            <p><strong>General Inquiries:</strong><br>
+            <a href="mailto:info@stmaryschool.edu">info@stmaryschool.edu</a></p>
+            <p><strong>Admissions:</strong><br>
+            <a href="mailto:admissions@stmaryschool.edu">admissions@stmaryschool.edu</a></p>
+            <p><strong>Principal:</strong><br>
+            <a href="mailto:principal@stmaryschool.edu">principal@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Office Hours</h3>
+            <p><strong>Monday - Friday:</strong><br>
+            8:00 AM - 5:00 PM</p>
+            <p><strong>Saturday:</strong><br>
+            9:00 AM - 1:00 PM</p>
+            <p><strong>Sunday:</strong><br>
+            Closed</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section style="background-color: #f5f5f5; padding: 3rem 0;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Send Us a Message</h2>
+        
+        <div style="max-width: 700px; margin: 0 auto; background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Format: +1 (234) 567-8900">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select Subject --</option>
+                        <option value="Admission">Admission Inquiry</option>
+                        <option value="Fees">Fee Related</option>
+                        <option value="Academic">Academic Concern</option>
+                        <option value="General">General Inquiry</option>
+                        <option value="Complaint">Complaint/Feedback</option>
+                        <option value="Event">Event Inquiry</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Send Message</button>
+                </div>
+
+                <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                    We will respond to your message within 24 business hours.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Departments Section -->
+<section class="container">
+    <h2 style="text-align: center; margin: 3rem 0;">Department Contacts</h2>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <h3>🎓 Academics</h3>
+            <p><strong>Head of Academics:</strong><br>
+            Dr. Rajesh Kumar<br>
+            <a href="tel:+1234567893">+1 (234) 567-893</a><br>
+            <a href="mailto:academics@stmaryschool.edu">academics@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Admissions</h3>
+            <p><strong>Admissions Officer:</strong><br>
+            Ms. Priya Singh<br>
+            <a href="tel:+1234567891">+1 (234) 567-891</a><br>
+            <a href="mailto:admissions@stmaryschool.edu">admissions@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>💰 Finance</h3>
+            <p><strong>Finance Manager:</strong><br>
+            Mr. Amit Patel<br>
+            <a href="tel:+1234567894">+1 (234) 567-894</a><br>
+            <a href="mailto:finance@stmaryschool.edu">finance@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>🏃 Sports</h3>
+            <p><strong>Sports Director:</strong><br>
+            Mr. Vikram Yadav<br>
+            <a href="tel:+1234567895">+1 (234) 567-895</a><br>
+            <a href="mailto:sports@stmaryschool.edu">sports@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Cultural Activities</h3>
+            <p><strong>Activities Coordinator:</strong><br>
+            Ms. Neha Sharma<br>
+            <a href="tel:+1234567896">+1 (234) 567-896</a><br>
+            <a href="mailto:activities@stmaryschool.edu">activities@stmaryschool.edu</a></p>
+        </div>
+
+        <div class="card">
+            <h3>👥 Student Welfare</h3>
+            <p><strong>Counselor:</strong><br>
+            Dr. Ananya Gupta<br>
+            <a href="tel:+1234567897">+1 (234) 567-897</a><br>
+            <a href="mailto:counselor@stmaryschool.edu">counselor@stmaryschool.edu</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Campus Location -->
+<section style="background-color: #f5f5f5; padding: 3rem 0;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Campus Location</h2>
+        
+        <div style="width: 100%; height: 400px; background-color: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center; color: #999;">
+            <p style="text-align: center; font-size: 1.1rem;">
+                🗺️ Map Integration Placeholder<br><br>
+                Replace this with actual map embed (Google Maps, MapBox, etc.)<br>
+                ST MARY'S SCHOOL, 123 Education Street, School City, SC 12345
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container">
+    <h2 style="text-align: center; margin: 3rem 0;">Frequently Asked Questions</h2>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <h3>What is the best time to contact the school?</h3>
+            <p>Office hours are Monday to Friday, 8:00 AM to 5:00 PM. For urgent matters, you can call the main office. For non-urgent queries, email is preferred.</p>
+        </div>
+
+        <div class="card">
+            <h3>How long does it take to get a response?</h3>
+            <p>We aim to respond to all inquiries within 24 business hours. However, complex queries may take 2-3 business days.</p>
+        </div>
+
+        <div class="card">
+            <h3>Can I visit the campus?</h3>
+            <p>Yes! We welcome campus visits by appointment. Please contact the admissions office to schedule a tour. Visits are preferably arranged on Saturday mornings.</p>
+        </div>
+
+        <div class="card">
+            <h3>How do I schedule a meeting with the principal?</h3>
+            <p>You can request a meeting through the office. Please provide at least 3 working days notice. The principal holds office hours on Wednesday afternoons.</p>
+        </div>
+
+        <div class="card">
+            <h3>Is there a parent-teacher meeting schedule?</h3>
+            <p>Yes, parent-teacher meetings are held quarterly in September, December, March, and June. Dates are communicated well in advance.</p>
+        </div>
+
+        <div class="card">
+            <h3>How can I provide feedback or suggestions?</h3>
+            <p>We value your feedback! You can submit suggestions through the contact form, email, or in person at the office. We review all feedback carefully.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="container" style="text-align: center; padding: 3rem 1rem;">
+    <h2>Ready to Join Our Community?</h2>
+    <p style="font-size: 1.1rem; margin: 1.5rem 0;">Start your journey with ST MARY'S SCHOOL today</p>
+    <a href="{{ url_for('admission') }}" class="btn btn-primary">Apply Now</a>
+</section>
+{% endblock %}

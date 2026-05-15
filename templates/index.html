@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ST MARY'S SCHOOL{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to ST MARY'S SCHOOL</h1>
+        <p class="hero-subtitle">Excellence in Education Since 1985</p>
+        <p>Nurturing brilliant minds with exceptional teaching and holistic development</p>
+        <a href="{{ url_for('admission') }}" class="btn btn-primary">Apply Now</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container">
+    <h2 style="text-align: center; margin: 3rem 0;">Why Choose ST MARY'S SCHOOL?</h2>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-header">
+                <h3>🎓 Academic Excellence</h3>
+            </div>
+            <p>Rigorous curriculum with experienced faculty members committed to student success. Our students consistently achieve top grades and secure admissions in premier institutions.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>🏆 Sports & Activities</h3>
+            </div>
+            <p>Comprehensive sports programs and extracurricular activities that develop leadership, teamwork, and physical fitness. Multiple clubs and societies for creative expression.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>🌍 Global Perspective</h3>
+            </div>
+            <p>International exposure through exchange programs and global partnerships. Students learn from diverse cultures and develop a worldview beyond borders.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>💻 Modern Facilities</h3>
+            </div>
+            <p>State-of-the-art labs, technology-enhanced classrooms, and digital learning resources. Well-equipped library and computer centers for research and innovation.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>👥 Holistic Development</h3>
+            </div>
+            <p>Personal counseling, mentoring programs, and character development initiatives. We focus on nurturing complete individuals with values and ethics.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>🎨 Creativity & Innovation</h3>
+            </div>
+            <p>Arts, music, drama, and STEM programs fostering creative thinking. Innovation labs encourage students to develop solutions for real-world problems.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section style="background-color: #f5f5f5; padding: 3rem 0;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Our Achievement</h2>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3 style="color: #0d47a1; font-size: 2.5rem; margin: 0;">1000+</h3>
+                <p>Students Enrolled</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #c62828; font-size: 2.5rem; margin: 0;">50+</h3>
+                <p>Faculty Members</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #1b5e20; font-size: 2.5rem; margin: 0;">38</h3>
+                <p>Years of Excellence</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #fbc02d; font-size: 2.5rem; margin: 0; color: #0d47a1;">95%</h3>
+                <p>Student Success Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="container" style="text-align: center; padding: 3rem 1rem;">
+    <h2>Ready to Join ST MARY'S SCHOOL?</h2>
+    <p style="font-size: 1.1rem; margin: 1.5rem 0;">Begin your journey towards academic excellence and personal growth today</p>
+    <a href="{{ url_for('admission') }}" class="btn btn-primary">Start Admission Process</a>
+    <a href="{{ url_for('contact') }}" class="btn btn-secondary" style="margin-left: 1rem;">Get in Touch</a>
+</section>
+{% endblock %}
