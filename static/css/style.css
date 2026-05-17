@@ -22,6 +22,38 @@
     height: auto;        /* keep original height ratio */
     display: block;
 }
+.School-poster {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-hero {
+    text-align: center;
+}
+
+.about-hero h2 {
+    margin-bottom: 20px;
+}
+
+/* Poster Image */
+.about-hero img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;          /* Keep original image ratio */
+    object-fit: contain;   /* Show full image */
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-hero img {
+        width: 100%;
+        height: auto;      /* Full image visible on mobile */
+    }
+}
 /* Color Palette */
 :root {
   --primary-green: #1b5e20;
